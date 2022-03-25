@@ -10,3 +10,7 @@ runs:
   steps:
     - run: echo Hello ${{ inputs.name }}
       shell: bash
+    - name: composite
+      uses: alex-blazh/github-actions/action1@main
+      with:
+        name: World
