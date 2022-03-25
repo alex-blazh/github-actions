@@ -8,5 +8,5 @@ inputs:
 runs:
   using: "composite"
   steps:
-    - run: echo Hello ${{ input.name }}
+    - run: echo Hello ${{ inputs.name }}
       shell: bash
