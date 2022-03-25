@@ -1,0 +1,12 @@
+name: "test composite action"
+description: "Description"
+inputs:
+  name:
+    description: "name to print"
+    required: true
+
+runs:
+  using: "composite"
+  steps:
+    - run: echo Hello ${{ input.name }}
+      shell: bash
