@@ -11,6 +11,7 @@ runs:
     - run: echo Hello ${{ inputs.name }}
       shell: bash
     - name: composite
-      uses: alex-blazh/github-actions/action1@main
+      # uses: alex-blazh/github-actions/action1@main
+      uses: action1
       with:
         name: World
