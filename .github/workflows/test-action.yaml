@@ -13,3 +13,11 @@ jobs:
     steps:
       - run: echo Hello
       - run: echo ${{ matrix.name }}
+
+  compose_job:
+    runs-on: ubuntu-latest
+    steps:
+    - name: composite
+      uses: alex-blazh/github-actions/action1@main
+      with:
+        name: World
