@@ -1,0 +1,23 @@
+name: Test callable action
+
+on: [workflow_call]
+
+jobs:
+  echo_job:
+    runs-on: ubuntu-latest
+
+    strategy:
+      matrix:
+        name: [World, Galaxy, Kitchen]
+
+    steps:
+      - run: echo Hello
+      - run: echo ${{ matrix.name }}
+
+  compose_job:
+    runs-on: ubuntu-latest
+    steps:
+    - name: composite
+      uses: alex-blazh/github-actions/action1@main
+      with:
+        name: World
